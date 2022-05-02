@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppPatitasFelicesProyecto.LoginPatitasFelicesaml">
+    <ContentPage.Content>
+        <Grid >
+
+            <Image Source="perroyamo.jpg" Aspect="AspectFill"></Image>
+            <BoxView BackgroundColor="CadetBlue" Opacity="0.6"></BoxView>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    
+                </Grid.RowDefinitions>
+
+                <Image Grid.Row="0" Source="logopatitasfelices.png" WidthRequest="100" HeightRequest="100" Margin="0,50,0,30"></Image>
+
+                <StackLayout Grid.Row="1" Padding="10,20">
+                    <Entry x:Name="usuarioLogin" Placeholder="Usuario" PlaceholderColor="White"></Entry>
+                    <Entry x:Name="passwordLogin" Placeholder="Contraseña" PlaceholderColor="White" IsPassword="True"></Entry>
+
+                    <Button x:Name="iniciarsesionLogin" Text="Iniciar Sesión" BackgroundColor="White" BorderWidth="20" TextColor="CadetBlue" Clicked="iniciarsesionLogin_Clicked"></Button>
+
+                    <StackLayout Orientation="Horizontal" >
+                        <Label Text="¿Recuperar Contraseña?" > </Label>
+                        <Label Text="Registrarse" HorizontalOptions="EndAndExpand" FontAttributes="Bold" x:Name="lblregistroApp"></Label>
+                        
+                    </StackLayout>
+                
+                </StackLayout>
+
+
+                <StackLayout Grid.Row="2" HorizontalOptions="Center" Margin="0,0,0,50">
+                    <Label Text="o iniciar sesión con: " ></Label>
+                    <StackLayout Orientation="Horizontal">
+                        <ImageButton Grid.Row="0" Source="iconogoogle.png" Clicked="ImageButton_Clicked"></ImageButton>
+                        
+                    </StackLayout>
+                    
+                </StackLayout>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
